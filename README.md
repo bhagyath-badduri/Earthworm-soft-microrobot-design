@@ -84,7 +84,7 @@ Bandwidth | 1 kHz |
 
 # Wireless Power Transfer
 
-![Wireless Power](wireless_power.png)
+![Wireless Power](Wireless_power_transfer.png)
 
 The robot receives power through **inductive wireless energy transfer**.
 
@@ -103,7 +103,7 @@ Output power: **~1.16 W**
 
 # CAD Model
 
-![CAD Model](Cad_model.png)
+![CAD Model](cad_model.png)
 
 A **SolidWorks CAD model** was created to design the microrobot structure.
 
