@@ -47,7 +47,7 @@ The microrobot integrates multiple subsystems:
 
 # Actuation System
 
-![SMA Actuator](images/sma_actuator.png)
+![SMA Actuator](sma_actuator.png)
 
 The robot uses **Shape Memory Alloy (SMA) bimorph actuators** to generate motion.
 
@@ -66,7 +66,7 @@ The bending occurs due to **thermal expansion mismatch between NiTi and aluminum
 
 ## Piezoresistive Sensor
 
-![Sensor Circuit](images/sensor_circuit.png)
+![Sensor](piezoresistive_sensor.png)
 
 Used for measuring mechanical strain and force applied to the robot body.
 
@@ -84,7 +84,7 @@ Bandwidth | 1 kHz |
 
 # Wireless Power Transfer
 
-![Wireless Power](images/wireless_power.png)
+![Wireless Power](wireless_power.png)
 
 The robot receives power through **inductive wireless energy transfer**.
 
@@ -103,7 +103,7 @@ Output power: **~1.16 W**
 
 # CAD Model
 
-![CAD Model](images/cad_model.png)
+![CAD Model](Cad_model.png)
 
 A **SolidWorks CAD model** was created to design the microrobot structure.
 
