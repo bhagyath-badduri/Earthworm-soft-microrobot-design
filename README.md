@@ -33,7 +33,7 @@ The robot uses **peristaltic locomotion**, where body segments contract and expa
 
 # Robot Concept
 
-![Robot Concept](images/robot_concept.png)
+![Robot Concept](robot_concept.gif)
 
 The microrobot integrates multiple subsystems:
 
