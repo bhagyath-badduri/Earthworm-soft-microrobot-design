@@ -1,160 +1,231 @@
-# Earthworm-Inspired Soft Microrobot Design
+# Earthworm-Inspired Soft Microrobot Design (ME 685)
 
 This repository presents the **conceptual design and system architecture of a bio-inspired soft microrobot** capable of peristaltic locomotion similar to an earthworm.
 
-The project was developed as part of the **Microrobotics Final Project (ME-685)** at **Stevens Institute of Technology**. The work focuses on **actuator selection, sensor integration, wireless power delivery, and CAD-based system design** for a soft robotic platform intended for confined-space applications.
+The project was developed as part of **ME 685 – Microrobotics** at Stevens Institute of Technology.  
+It focuses on **mathematical modeling, actuator and sensor selection, and system-level design**, based on research literature, without physical fabrication.
 
 ---
 
-## Authors
+## Project Overview
 
-Bhagyath Badduri  
-Mohammad Althaf Syed  
-Sai Likhit Nuvvala  
+Soft robotics enables safe operation in **confined, unstructured, and delicate environments** where rigid robots are not suitable.
 
-Department of Mechanical Engineering  
-Stevens Institute of Technology
+This project proposes a **microscale soft robot** designed for:
 
----
+- biomedical applications (drug delivery, minimally invasive procedures)  
+- aerospace inspection (tight mechanical structures)  
+- confined-space navigation  
 
-# Project Overview
-
-Soft robotics enables robots to operate safely in **unstructured and confined environments** where traditional rigid robots cannot function effectively.
-
-This project proposes an **earthworm-inspired microrobot** designed for:
-
-• Biomedical applications  
-• Aerospace inspection  
-• Navigation through narrow or complex environments  
-
-The robot uses **peristaltic locomotion**, where body segments contract and expand sequentially to produce forward motion.
+The robot mimics **earthworm locomotion (peristalsis)** using sequential contraction and expansion of body segments.
 
 ---
 
-# Robot Concept
+## Design Approach
 
-![Robot Concept](robot_concept.gif)
+Unlike traditional hardware projects, this work focuses on:
+
+- **theoretical modeling**
+- **component selection from research papers**
+- **mathematical analysis of actuators and sensors**
+- **complete system architecture design**
+
+The full system was designed and validated analytically, including:
+
+- actuator behavior modeling  
+- sensor performance estimation  
+- wireless power calculations  
+- fabrication workflow planning  
+
+---
+
+## Bio-Inspired Locomotion
+
+The robot replicates **peristaltic motion**, where:
+
+- front segments anchor  
+- middle segments contract  
+- rear segments push forward  
+
+This produces smooth crawling motion similar to an earthworm.
+
+---
+
+## System Architecture
 
 The microrobot integrates multiple subsystems:
 
-• Shape Memory Alloy (SMA) actuators  
-• Piezoresistive force sensors  
-• Capacitive proximity sensors  
-• Wireless inductive power transfer  
-• Soft elastomer robot body
+- **Shape Memory Alloy (SMA) actuators**
+- **Piezoresistive force sensors**
+- **Capacitive proximity sensors**
+- **Wireless inductive power transfer**
+- **Soft elastomer body structure**
 
 ---
 
-# Actuation System
+## Actuation System (SMA-Based)
 
-![SMA Actuator](sma_actuator.png)
+The robot uses **SMA bimorph actuators** for motion.
 
-The robot uses **Shape Memory Alloy (SMA) bimorph actuators** to generate motion.
+### Why SMA?
 
-Key features:
+- compact and suitable for microscale  
+- high strain capability  
+- thermally driven (Joule heating)  
+- enables soft deformation  
 
-• Compact actuation for micro-scale robots  
-• Large deformation capability  
-• Thermal activation using Joule heating  
-• Suitable for soft robotic locomotion
+### Mathematical Modeling
 
-The bending occurs due to **thermal expansion mismatch between NiTi and aluminum layers**, generating controlled curvature.
+Actuator bending is modeled using:
 
----
+- curvature radius due to thermal mismatch  
+- angular deflection  
+- displacement calculations  
 
-# Sensor Design
+From the design:
 
-## Piezoresistive Sensor
+- bending angle ≈ **10.2°**  
+- horizontal displacement ≈ **1.6 µm**  
+- vertical displacement ≈ **26.65 µm** :contentReference[oaicite:1]{index=1}  
 
-![Sensor](piezoresistive_sensor.png)
-
-Used for measuring mechanical strain and force applied to the robot body.
-
-A **Wheatstone bridge configuration** amplifies small resistance changes caused by deformation.
-
-Specifications:
-
-| Parameter | Value |
-|-----------|------|
-Force range | 0.1 – 3 mN |
-Resolution | < 5 µN |
-Bandwidth | 1 kHz |
+ These values confirm feasibility of peristaltic motion at microscale.
 
 ---
 
-# Wireless Power Transfer
+## 📡 Sensor Design
 
-![Wireless Power](Wireless_power_transfer.png)
+### 1️⃣ Piezoresistive Sensor
 
-The robot receives power through **inductive wireless energy transfer**.
+Used to measure **strain and force** in the robot body.
+
+- Force range: 0.1 – 3 mN  
+- Resolution: < 5 µN  
+- Bandwidth: 1 kHz  
+
+Key concept:
+
+- resistance change proportional to strain  
+- implemented using **Wheatstone bridge** for signal amplification  
+
+---
+
+### 2️⃣ Capacitive Proximity Sensor
+
+Used for **environment detection and obstacle sensing**.
+
+- Detection range: 0–5 cm  
+- Resolution: ≤ 1 mm  
+- Response time: < 10 ms  
+
+Key modeling:
+
+- capacitance varies with distance (1/d relationship)  
+- sensitivity increases at closer range  
+
+---
+
+## ⚡ Wireless Power Transfer
+
+The robot is powered using **inductive coupling**, eliminating onboard batteries.
+
+### Design Features:
+
+- frequency: 200–300 kHz  
+- induced voltage ≈ 19.6 V  
+- output power ≈ **1.16 W** :contentReference[oaicite:2]{index=2}  
 
 Advantages:
 
-• Eliminates bulky onboard batteries  
-• Enables continuous operation  
-• Suitable for micro-scale robots
-
-Typical parameters:
-
-Transmission frequency: **200–300 kHz**  
-Output power: **~1.16 W**
+- continuous operation  
+- compact design  
+- suitable for micro-scale systems  
 
 ---
 
-# CAD Model
+## CAD and Structural Design
 
-![CAD Model](cad_model.png)
+A full CAD-based structural design was developed, including:
 
-A **SolidWorks CAD model** was created to design the microrobot structure.
+- actuator housing  
+- spring-assisted structure  
+- sensor placement  
+- wiring paths  
 
-The model includes:
+The design ensures:
 
-• Cylindrical actuator housing  
-• Spring-assisted structure  
-• Sensor mounting locations  
-• Electrical wiring paths
+- modular integration  
+- compatibility with SMA actuation  
+- ease of fabrication  
 
 ---
 
-# Proposed Fabrication Process
+## Proposed Fabrication Workflow
 
-Although the robot was **not physically fabricated**, the complete fabrication workflow was designed.
-
-Steps:
+Although physical fabrication was not performed, a complete process was designed:
 
 1. SMA actuator preparation  
-2. Sensor preparation  
-3. Mold fabrication  
+2. Sensor fabrication and testing  
+3. Mold design (3D printing / CNC)  
 4. Elastomer casting  
-5. Actuator integration  
-6. Sensor embedding  
-7. Final casting and curing
+5. Component integration  
+6. Final curing and assembly  
+
+This provides a clear path toward real-world implementation.
 
 ---
 
-# Applications
+## What This Project Demonstrates
 
-Potential applications include:
+This project demonstrates strong understanding of:
 
-• Targeted drug delivery  
-• Minimally invasive medical procedures  
-• Aerospace structure inspection  
-• Pipeline monitoring  
-• Confined-space exploration
-
----
-
-# Future Work
-
-Future improvements could include:
-
-• Embedded microcontroller integration  
-• Closed-loop locomotion control  
-• Improved wireless power efficiency  
-• Autonomous navigation
+- soft robotics design  
+- bio-inspired locomotion  
+- SMA actuator physics  
+- sensor modeling (piezoresistive + capacitive)  
+- wireless power transfer  
+- system integration for microrobots  
+- theoretical and analytical design methods  
 
 ---
 
-# License
+## Applications
+
+- targeted drug delivery  
+- minimally invasive surgery  
+- pipeline inspection  
+- aerospace structure monitoring  
+- confined environment exploration  
+
+---
+
+## Future Work
+
+- closed-loop control using embedded electronics  
+- autonomous navigation  
+- improved energy efficiency  
+- integration with onboard microcontrollers  
+- physical prototyping and testing  
+
+---
+
+## Tools & Environment
+
+- SolidWorks (CAD design)  
+- MATLAB / analytical modeling  
+- Research-based design methodology  
+- Soft robotics and microrobotics literature  
+
+---
+
+## Reference Report
+
+For complete technical details, equations, and design analysis, refer to:
+
+**ME 685 Final Project Report**  
+:contentReference[oaicite:3]{index=3}  
+
+---
+
+## License
 
 MIT License
