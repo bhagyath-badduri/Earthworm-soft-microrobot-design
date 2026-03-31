@@ -20,6 +20,9 @@ This project proposes a **microscale soft robot** designed for:
 The robot mimics **earthworm locomotion (peristalsis)** using sequential contraction and expansion of body segments.
 
 ---
+## Robot Concept / Motion Visualization
+
+![Robot Concept](robot_concept.gif)
 
 ## Design Approach
 
