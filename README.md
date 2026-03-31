@@ -95,7 +95,7 @@ From the design:
 
 ---
 
-## 📡 Sensor Design
+## Sensor Design
 
 ### 1️⃣ Piezoresistive Sensor
 
@@ -127,7 +127,7 @@ Key modeling:
 
 ---
 
-## ⚡ Wireless Power Transfer
+## Wireless Power Transfer
 
 The robot is powered using **inductive coupling**, eliminating onboard batteries.
 
