@@ -222,8 +222,7 @@ This project demonstrates strong understanding of:
 For complete technical details, equations, and design analysis, refer to:
 
 **ME 685 Final Project Report**  
-:contentReference[oaicite:3]{index=3}  
-
+  
 ---
 
 ## License
